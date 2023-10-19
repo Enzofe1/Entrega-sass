@@ -1,0 +1,276 @@
+#fondoindex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 95vh;
+  color: #E0E0E0;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/fondo_index.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+footer p {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #363636;
+  color: #E0E0E0;
+}
+
+/*---------------------CONTACTO---------------------*/
+.tarjeta-contact {
+  box-shadow: 0 0 20px 0 #050505;
+}
+.tarjeta-contact > * {
+  padding: 1em;
+}
+
+.contact-form {
+  background-color: rgb(36, 36, 36);
+}
+.contact-form form {
+  margin: 0;
+  padding: 1.5em;
+}
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+  width: 100%;
+  padding: 0.7em;
+  border: none;
+  background: none;
+  border-bottom: 1px solid;
+}
+.contact-form form button {
+  background: #787878;
+  border: 0;
+  text-transform: uppercase;
+  padding: 0.7em;
+}
+
+.contact-info {
+  background-color: rgb(19, 19, 19);
+}
+
+.contact {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.content {
+  color: #E0E0E0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  padding: 1.5em;
+}
+.content h1 {
+  margin-bottom: 15px;
+}
+
+/*---------------------SERVICIO---------------------*/
+.container-card {
+  display: flex;
+  flex-direction: row;
+  padding: 50px;
+}
+
+.title-cards {
+  margin-top: 100px;
+  color: #E0E0E0;
+  text-align: center;
+}
+
+.card {
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #787878;
+  box-shadow: 0px 1px 10px #050505;
+  transition: all 400ms ease-out;
+  cursor: default;
+  margin-inline: 15px;
+}
+.card:hover {
+  box-shadow: 5px 5px 20px #050505;
+  transform: translateY(-3%);
+}
+.card img {
+  width: 100%;
+}
+.card .contenido-card {
+  padding: 15px;
+  text-align: center;
+}
+.card .contenido-card h3 {
+  margin-bottom: 15px;
+  color: #363636;
+}
+.card .contenido-card a {
+  text-decoration: none;
+  color: #363636;
+}
+
+/*---------------------GALERIA---------------------*/
+#galeria img {
+  width: 100%;
+  height: 270px;
+}
+
+#galeria .col-lg-4 {
+  margin: 0 !important;
+  padding: 25px;
+}
+
+#galeria img:hover {
+  border: 5px solid #E0E0E0;
+}
+
+#galeria h1 {
+  padding: 60px;
+  margin-bottom: 0;
+  color: #E0E0E0;
+}
+
+#galeria p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: plus jakarta sans;
+  min-height: 100vh;
+  background: url(../img/fondo_index.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding-bottom: 3em;
+  width: 100%;
+}
+
+p {
+  color: #E0E0E0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*---------------------NAVBAR---------------------*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.3rem 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(30px);
+  z-index: 100;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  z-index: -1;
+}
+
+.logo {
+  font-size: 2rem;
+  color: aliceblue;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.navbar a {
+  font-size: 1.15rem;
+  color: aliceblue;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 2.5rem;
+}
+
+#check {
+  display: none;
+}
+
+.icons {
+  position: absolute;
+  right: 5%;
+  font-size: 2.8rem;
+  color: aliceblue;
+  cursor: pointer;
+  display: none;
+}
+
+/*BREACKPOINTS*/
+@media (max-width: 992px) {
+  .header {
+    padding: 1.3rem 5%;
+  }
+}
+@media (max-width: 768px) {
+  .icons {
+    display: inline-flex;
+  }
+  #check:checked ~ .icons #menu-icon {
+    display: none;
+  }
+  .icons #close-icon {
+    display: none;
+  }
+  #check:checked ~ .icons #close-icon {
+    display: block;
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+    transition: 0.3s ease;
+  }
+  #check:checked ~ .navbar {
+    height: 17.7rem;
+  }
+  .navbar a {
+    display: block;
+    font-size: 1.1rem;
+    margin: 1.5rem 0;
+    text-align: center;
+    transform: translateY(-50px);
+    transition: 0.3s ease;
+  }
+  #check:checked ~ .navbar a {
+    transform: translateY(0);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
